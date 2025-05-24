@@ -1,0 +1,94 @@
+:root {
+  --bg: #282828;
+  --fg: #ebdbb2;
+  --red: #fb4934;
+  --green: #b8bb26;
+  --yellow: #fabd2f;
+  --blue: #83a598;
+}
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: monospace;
+}
+
+h1 {
+  color: var(--fg);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h3 {
+  color: var(--fg);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.calculator {
+  background-color: #3c3836;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#display {
+  background-color: #504945;
+  color: var(--fg);
+  font-size: 2em;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: right;
+  min-height: 60px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+.number {
+  background-color: var(--blue);
+  color: var(--bg);
+}
+
+.operator {
+  background-color: var(--yellow);
+  color: var(--bg);
+}
+
+.equal {
+  background-color: var(--green);
+  color: var(--bg);
+  grid-column: span 2;
+}
+
+.clear {
+  background-color: var(--red);
+  color: var(--fg);
+}
+
+.delete {
+  background-color: #d3869b;
+  color: var(--bg);
+}
