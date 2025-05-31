@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Data Type</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Check Data Type</h1>
+      <input type="text" id="inputBox" placeholder="Enter data" />
+      <button onclick="checkDataType()">Check</button>
+      <div id="result"></div>
+    </div>
+    <script>
+      function checkDataType() {
+        const input = document.getElementById("inputBox").value;
+        const resultDiv = document.getElementById("result");
+
+        if (input === "") {
+          resultDiv.textContent = "Please enter some data.";
+          return;
+        }
+
+        let dataType = determineDataType(input);
+        resultDiv.textContent = "Data Type: " + dataType;
+      }
+
+      function determineDataType(input) {
+        if (!isNaN(input) && !isNaN(parseFloat(input))) {
+          if (input.includes(".")) {
+            return "Float/Double";
+          } else {
+            return "Integer";
+          }
+        } else if (
+          input.toLowerCase() === "true" ||
+          input.toLowerCase() === "false"
+        ) {
+          return "Boolean";
+        } else {
+          return "String";
+        }
+      }
+    </script>
+  </body>
+</html>
