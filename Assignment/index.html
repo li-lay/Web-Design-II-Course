@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKU Hotel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+      .particle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.6;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">AKU Hotel</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/booking.html">Booking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/history.html">History</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero py-5" id="hero">
+      <div class="container text-center" style="position: relative; z-index: 2">
+        <h1 class="display-4 mb-4">Welcome to AKU Hotel</h1>
+        <p class="lead mb-4">
+          Premium accommodations in the heart of Phnom Penh city.
+        </p>
+        <a
+          href="pages/booking.html"
+          class="btn btn-lg btn-primary"
+          id="bookButton"
+          >Book Your Stay</a
+        >
+      </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Amenities</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Swimming Pool</h5>
+                <p class="card-text">
+                  Enjoy our Olympic-sized infinity pool with panoramic views
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Spa & Wellness</h5>
+                <p class="card-text">
+                  Rejuvenate with our premium spa treatments
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Fine Dining</h5>
+                <p class="card-text">
+                  Experience gourmet cuisine at our award-winning restaurant
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Guest Experiences</h2>
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial text-center">
+                <p class="quote">
+                  "The most luxurious stay I've ever experienced. Will
+                  definitely return!"
+                </p>
+                <p class="author">- Li Lay</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial text-center">
+                <p class="quote">
+                  "Exceptional service and breathtaking views. Highly
+                  recommended!"
+                </p>
+                <p class="author">- May Thida</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial text-center">
+                <p class="quote">
+                  "The perfect blend of modern luxury and traditional
+                  hospitality."
+                </p>
+                <p class="author">- Chang Kimhak</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Contact Us</h5>
+            <p>123 Avenue, Phnom Penh</p>
+            <p>Phone: +855 10 000 000</p>
+            <p>Email: info@akuhotel.com</p>
+          </div>
+          <div class="col-md-6">
+            <h5>Follow Us</h5>
+            <div class="social-links">
+              <a href="#" class="me-2">Facebook</a>
+              <a href="#" class="me-2">Instagram</a>
+              <a href="#" class="me-2">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <p>&copy; 2025 AKU Hotel. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document
+        .getElementById("bookButton")
+        .addEventListener("mouseover", () => {
+          anime({
+            targets: "#bookButton",
+            scale: 1.05,
+            backgroundColor: "#b5761a",
+            duration: 300,
+            easing: "easeInOutQuad",
+          });
+        });
+      document.getElementById("bookButton").addEventListener("mouseout", () => {
+        anime({
+          targets: "#bookButton",
+          scale: 1,
+          backgroundColor: "#d79921",
+          duration: 300,
+          easing: "easeInOutQuad",
+        });
+      });
+    </script>
+    <script>
+      const hero = document.getElementById("hero");
+      const colors = ["#d79921", "#458588", "#98971a", "#b16286", "#cc241d"];
+
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement("div");
+        particle.className = "particle";
+        particle.style.width = `${Math.random() * 10 + 5}px`;
+        particle.style.height = particle.style.width;
+        particle.style.backgroundColor =
+          colors[Math.floor(Math.random() * colors.length)];
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        hero.appendChild(particle);
+
+        anime({
+          targets: particle,
+          translateX: () => anime.random(-50, 50),
+          translateY: () => anime.random(-50, 50),
+          duration: () => anime.random(5000, 10000),
+          loop: true,
+          direction: "alternate",
+          easing: "easeInOutSine",
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking - AKU Hotel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">AKU Hotel</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="booking.html">Booking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Booking Form -->
+    <section class="booking py-5">
+      <div class="container">
+        <h1 class="text-center mb-5">Book Your Stay</h1>
+
+        <div class="row">
+          <div class="col-md-6">
+            <form id="bookingForm">
+              <div class="mb-3">
+                <label for="checkIn" class="form-label">Check-in Date</label>
+                <input type="date" class="form-control" id="checkIn" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="checkOut" class="form-label">Check-out Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="checkOut"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="guests" class="form-label">Number of Guests</label>
+                <select class="form-select" id="guests" required>
+                  <option value="1">1 Guest</option>
+                  <option value="2" selected>2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5+ Guests</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Room Type</label>
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roomType"
+                    id="standard"
+                    value="standard"
+                    checked
+                  />
+                  <label class="form-check-label" for="standard">
+                    Standard Room ($99/night)
+                  </label>
+                </div>
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roomType"
+                    id="deluxe"
+                    value="deluxe"
+                  />
+                  <label class="form-check-label" for="deluxe">
+                    Deluxe Room ($149/night)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roomType"
+                    id="suite"
+                    value="suite"
+                  />
+                  <label class="form-check-label" for="suite">
+                    Suite ($249/night)
+                  </label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="specialRequests" class="form-label"
+                  >Special Requests</label
+                >
+                <textarea
+                  class="form-control"
+                  id="specialRequests"
+                  rows="3"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">
+                Confirm Booking
+              </button>
+            </form>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">Room Preview</h5>
+              </div>
+              <div class="card-body">
+                <div id="roomPreview" class="text-center">
+                  <div class="placeholder-image mb-3">
+                    <div
+                      class="bg-secondary"
+                      style="height: 200px; overflow: hidden"
+                    >
+                      <img
+                        src="../content/images/room-preview.jpg"
+                        alt="Room Image"
+                        style="max-width: 100%; height: auto; object-fit: cover"
+                      />
+                    </div>
+                  </div>
+                  <p id="roomDescription">
+                    Standard Room: Cozy and comfortable with all essential
+                    amenities.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Contact Us</h5>
+            <p>123 Luxury Avenue, Phnom Penh</p>
+            <p>Phone: +855 12 345 678</p>
+            <p>Email: info@akuhotel.com</p>
+          </div>
+          <div class="col-md-6">
+            <h5>Follow Us</h5>
+            <div class="social-links">
+              <a href="#" class="me-2">Facebook</a>
+              <a href="#" class="me-2">Instagram</a>
+              <a href="#" class="me-2">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <p>&copy; 2025 AKU Hotel. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Booking Confirmed!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Thank you for choosing AKU Hotel!</p>
+            <div id="bookingSummary"></div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">
+              View Booking History
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Room type selection handling
+      document.querySelectorAll('input[name="roomType"]').forEach((radio) => {
+        radio.addEventListener("change", function () {
+          updateRoomPreview(this.value);
+        });
+      });
+
+      function updateRoomPreview(roomType) {
+        const preview = document.getElementById("roomPreview");
+        let description = "";
+
+        switch (roomType) {
+          case "standard":
+            description =
+              "Standard Room: Cozy and comfortable with all essential amenities.";
+            break;
+          case "deluxe":
+            description =
+              "Deluxe Room: Spacious room with premium amenities and city views.";
+            break;
+          case "suite":
+            description =
+              "Suite: Luxury living with separate bedroom, living area, and premium amenities.";
+            break;
+        }
+
+        document.getElementById("roomDescription").textContent = description;
+      }
+
+      // Form submission handling
+      document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const checkIn = document.getElementById("checkIn").value;
+          const checkOut = document.getElementById("checkOut").value;
+          const guests = document.getElementById("guests").value;
+          const roomType = document.querySelector(
+            'input[name="roomType"]:checked',
+          ).value;
+          const requests = document.getElementById("specialRequests").value;
+
+          // Create booking summary
+          const summary = `
+        <p><strong>Check-in:</strong> ${checkIn}</p>
+        <p><strong>Check-out:</strong> ${checkOut}</p>
+        <p><strong>Guests:</strong> ${guests}</p>
+        <p><strong>Room Type:</strong> ${
+          roomType.charAt(0).toUpperCase() + roomType.slice(1)
+        }</p>
+        ${
+          requests
+            ? `<p><strong>Special Requests:</strong> ${requests}</p>`
+            : ""
+        }
+      `;
+
+          document.getElementById("bookingSummary").innerHTML = summary;
+
+          // Show confirmation modal
+          const modal = new bootstrap.Modal(
+            document.getElementById("confirmationModal"),
+          );
+          modal.show();
+        });
+
+      // Initialize default room preview
+      updateRoomPreview("standard");
+
+      // Set min date to today
+      const today = new Date().toISOString().split("T")[0];
+      document.getElementById("checkIn").min = today;
+      document.getElementById("checkOut").min = today;
+    </script>
+  </body>
+</html>

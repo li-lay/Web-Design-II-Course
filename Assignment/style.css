@@ -1,0 +1,160 @@
+:root {
+  --gruv-bg: #282828;
+  --gruv-bg-light: #3c3836;
+  --gruv-text: #ebdbb2;
+  --gruv-text-light: #fbf1c7;
+  --gruv-yellow: #d79921;
+  --gruv-blue: #458588;
+  --gruv-green: #98971a;
+  --gruv-aqua: #689d6a;
+  --gruv-red: #cc241d;
+  --gruv-orange: #d65d0e;
+  --gruv-purple: #b16286;
+}
+
+body {
+  background-color: var(--gruv-bg);
+  color: var(--gruv-text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  background-color: var(--gruv-bg-light);
+  border-bottom: 1px solid var(--gruv-yellow);
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--gruv-text-light) !important;
+}
+
+.nav-link.active {
+  color: var(--gruv-yellow) !important;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: var(--gruv-yellow);
+  border-color: var(--gruv-yellow);
+  color: var(--gruv-bg);
+}
+
+.btn-primary:hover {
+  background-color: #b5761a;
+  border-color: #b5761a;
+}
+
+.btn-outline-secondary {
+  color: var(--gruv-text);
+  border-color: var(--gruv-blue);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--gruv-blue);
+  color: var(--gruv-text-light);
+}
+
+.btn-outline-danger {
+  color: var(--gruv-red);
+  border-color: var(--gruv-red);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--gruv-red);
+  color: var(--gruv-text-light);
+}
+
+.card {
+  background-color: var(--gruv-bg-light);
+  border: 1px solid var(--gruv-green);
+  color: var(--gruv-text);
+}
+
+.hero {
+  background: linear-gradient(rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)),
+    url("content/images/hotel-banner.jpg") center/cover no-repeat;
+  color: var(--gruv-text-light);
+  padding: 100px 0;
+}
+
+.amenities,
+.testimonials,
+.booking,
+.history {
+  padding: 80px 0;
+}
+
+.testimonial .quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial .author {
+  font-weight: bold;
+  margin-top: 20px;
+  color: var(--gruv-yellow);
+}
+
+.footer {
+  background-color: var(--gruv-bg-light);
+  border-top: 1px solid var(--gruv-green);
+}
+
+.social-links a {
+  color: var(--gruv-text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--gruv-yellow);
+}
+
+.form-control,
+.form-select {
+  background-color: var(--gruv-bg-light);
+  color: var(--gruv-text);
+  border: 1px solid var(--gruv-green);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--gruv-bg-light);
+  color: var(--gruv-text);
+  border-color: var(--gruv-yellow);
+  box-shadow: 0 0 0 0.25rem rgba(215, 153, 33, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--gruv-yellow);
+  border-color: var(--gruv-yellow);
+}
+
+.table {
+  color: var(--gruv-text);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(69, 133, 136, 0.1);
+}
+
+.modal-content {
+  background-color: var(--gruv-bg-light);
+  color: var(--gruv-text);
+}
+
+.modal-header,
+.modal-footer {
+  border-color: var(--gruv-green);
+}
+
+.btn-close {
+  filter: invert(1);
+}
+
+.badge {
+  font-weight: normal;
+}
